@@ -7,9 +7,9 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE;md5=86d3f3a95c324c9479bd8986968f43
 
 COMPATIBLE_HOST = "(x86_64|aarch64|arm).*-linux"
 
-DIRECTORY_x86-64 = "${BPN}-v${PV}-linux-amd64"
-DIRECTORY_arm = "${BPN}-v${PV}-linux-arm"
-DIRECTORY_aarch64 = "${BPN}-v${PV}-linux-arm64"
+DIRECTORY_x86-64 = "kubeedge-v${PV}-linux-amd64"
+DIRECTORY_arm = "kubeedge-v${PV}-linux-arm"
+DIRECTORY_aarch64 = "kubeedge-v${PV}-linux-arm64"
 
 SRC_URI_x86-64 = "https://github.com/kubeedge/kubeedge/releases/download/v${PV}/${DIRECTORY}.tar.gz;name=amd64"
 SRC_URI_arm = "https://github.com/kubeedge/kubeedge/releases/download/v${PV}/${DIRECTORY}.tar.gz;name=arm"
