@@ -8,4 +8,5 @@ LICENSE = "MIT"
 #Prefix to the resulting deployable tarball name
 export IMAGE_BASENAME = "EdgeFarm-Image"
 
-IMAGE_INSTALL += "kubeedge"
+IMAGE_INSTALL += "\
+                  edgecore"
