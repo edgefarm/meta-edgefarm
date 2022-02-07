@@ -1,0 +1,4 @@
+EDGECORE_OVERLAY_CONFIG_ROOT_DIR ?= "/data"
+EDGECORE_OVERLAY_CONFIG_LOWER_DIR ?= "/var/lib/kubeedge/"
+EDGECORE_OVERLAY_CONFIG_UPPER_DIR ?= "/data/edgecore/"
+EDGECORE_OVERLAY_CONFIG_WORK_DIR ?= "/data/.overlay/edgecore-work/"

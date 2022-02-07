@@ -9,4 +9,5 @@ LICENSE = "MIT"
 export IMAGE_BASENAME = "EdgeFarm-Image"
 
 IMAGE_INSTALL += "\
-                  edgecore"
+                  edgecore\
+                  persistent-edgecore"

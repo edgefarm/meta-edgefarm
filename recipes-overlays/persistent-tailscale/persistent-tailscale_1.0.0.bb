@@ -3,8 +3,7 @@ inherit features_check
 require persistent-tailscale.inc
 
 SUMMARY = "Creates and mounts overlay directories"
-DESCRIPTION = "Creates and mounts overlay directories for tailscale state.\
-               This is requied as the FS is read only."
+DESCRIPTION = "Creates and mounts overlay directories for tailscale state."
 HOMEPAGE = "https://ci4rail.com"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
