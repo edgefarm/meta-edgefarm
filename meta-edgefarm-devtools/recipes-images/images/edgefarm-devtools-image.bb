@@ -1,4 +1,4 @@
-require edgefarm-image.bb
+require ../../../meta-edgefarm-core/recipes-images/images/edgefarm-image.bb
 
 #Prefix to the resulting deployable tarball name
 export IMAGE_BASENAME = "EdgeFarm-Devtools-Image"
