@@ -33,3 +33,5 @@ do_install() {
 }
 
 FILES_${PN} += "${bindir}/nats"
+
+INSANE_SKIP_${PN}_append = " already-stripped"
