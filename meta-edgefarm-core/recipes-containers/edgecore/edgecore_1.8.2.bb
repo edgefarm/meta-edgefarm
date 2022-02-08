@@ -3,7 +3,7 @@ DESCRIPTION = "Extend native containerized application orchestration and device 
 HOMEPAGE = "https://github.com/kubeedge/kubeedge"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
+LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE-${PN}-${PV};md5=86d3f3a95c324c9479bd8986968f4327"
 
 COMPATIBLE_HOST = "(x86_64|aarch64|arm).*-linux"
 
@@ -22,7 +22,7 @@ SRC_URI[arm.sha256sum] = "a6346d3bd4710b3fe458a5cc8a22a1e2260dbfa77b5d97a4169af8
 SRC_URI[arm64.md5sum] = "3eca3c2ca5356fc6978c38f2d2629957"
 SRC_URI[arm64.sha256sum] = "3314d4429074fbdf2caa54bf7de0a4f3b3823a34feec14d9a95618844edaf6fe"
 
-SRC_URI_append = " https://raw.githubusercontent.com/kubeedge/kubeedge/v${PV}/LICENSE;name=license"
+SRC_URI_append = " https://raw.githubusercontent.com/kubeedge/kubeedge/v${PV}/LICENSE;name=license;downloadfilename=LICENSE-${PN}-${PV}"
 SRC_URI[license.md5sum] = "86d3f3a95c324c9479bd8986968f4327"
 SRC_URI[license.sha256sum] = "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
 

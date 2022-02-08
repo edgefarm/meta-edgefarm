@@ -4,7 +4,7 @@ DESCRIPTION = "Lightweight and portable command-line YAML, JSON and XML processo
 HOMEPAGE = "https://github.com/mikefarah/yq"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE;md5=e40a0dcd62f8269b9bff37fe9aa7dcc2"
+LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE-${PN}-${PV};md5=e40a0dcd62f8269b9bff37fe9aa7dcc2"
 
 COMPATIBLE_HOST = "(i.86|x86_64|aarch64|arm).*-linux"
 
@@ -29,7 +29,7 @@ SRC_URI[arm.sha256sum] = "6101d9377c4684a2227189329c1d6e34c6b54d78b113e1d626a71e
 SRC_URI[arm64.md5sum] = "d930e7f0ef2d61e715cdde265766182f"
 SRC_URI[arm64.sha256sum] = "970c6e099f9d3d59d5d67e23f741243ee1c43e49daf2ca27cc7d96838e84556f"
 
-SRC_URI_append = " https://raw.githubusercontent.com/mikefarah/yq/v${PV}/LICENSE;name=license"
+SRC_URI_append = " https://raw.githubusercontent.com/mikefarah/yq/v${PV}/LICENSE;name=license;downloadfilename=LICENSE-${PN}-${PV}"
 SRC_URI[license.md5sum] = "e40a0dcd62f8269b9bff37fe9aa7dcc2"
 SRC_URI[license.sha256sum] = "697db34dabb21562fe84487a2ccd031fbd45382b89c2cbdec8ef31682c486040"
 
