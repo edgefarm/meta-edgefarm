@@ -12,4 +12,5 @@ IMAGE_INSTALL += "\
                    yq \
                    bind-utils \
                    termshark \
+                   nats \
                    "
