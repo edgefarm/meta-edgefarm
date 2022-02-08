@@ -4,7 +4,7 @@ DESCRIPTION = "A terminal user-interface for tshark, inspired by Wireshark."
 HOMEPAGE = "https://github.com/gcla/termshark"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE-${PN}-${PV};md5=078881bfb263eb2e92e6c338186db5d7"
+LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE-${BPN}-${PV};md5=078881bfb263eb2e92e6c338186db5d7"
 
 COMPATIBLE_HOST = "(x86_64|aarch64|arm).*-linux"
 
@@ -29,7 +29,7 @@ SRC_URI[arm.sha256sum] = "be183090c117f9bd45e896c229faa28a42f95dda386d7da1368965
 SRC_URI[arm64.md5sum] = "711e31e93e8f8595700150642f789b65"
 SRC_URI[arm64.sha256sum] = "3031073aebf22b29aaaf3bad7adfabe499cf70468763aa1505be40955acf63e2"
 
-SRC_URI_append = " https://raw.githubusercontent.com/gcla/termshark/v${PV}/LICENSE;name=license;downloadfilename=LICENSE-${PN}-${PV}"
+SRC_URI_append = " https://raw.githubusercontent.com/gcla/termshark/v${PV}/LICENSE;name=license;downloadfilename=LICENSE-${BPN}-${PV}"
 SRC_URI[license.md5sum] = "078881bfb263eb2e92e6c338186db5d7"
 SRC_URI[license.sha256sum] = "e96db14e21841660831e2964551da502438c1d1942cb70ab362792e8b977bbf5"
 
