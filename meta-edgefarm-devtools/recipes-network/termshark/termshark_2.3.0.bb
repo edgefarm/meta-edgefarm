@@ -39,3 +39,5 @@ do_install() {
 }
 
 FILES_${PN} += "${bindir}/termshark"
+
+INSANE_SKIP_${PN}_append = " already-stripped"
