@@ -9,5 +9,7 @@ IMAGE_INSTALL += "\
                    tailscale \
                    persistent-tailscale \
                    jq \
+                   yq \
                    bind-utils \
+                   termshark \
                    "
