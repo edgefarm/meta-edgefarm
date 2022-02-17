@@ -7,7 +7,7 @@ PACKAGES = "\
     packagegroup-edgefarm-base \
     "
 
-RDEPENDS_packagegroup-edgefarm-base = "\
+RDEPENDSf_packagegroup-edgefarm-base = "\
     edgecore \
-    ${@bb.utils.contains('IMAGE_FEATURES', 'read-only-rootfs', 'persistent-edgecore', '',d)} \
+    persistent-edgecore \
     "

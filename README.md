@@ -8,7 +8,8 @@ This layer also includes images prepared for the Ci4Rail supported HW devices.
 
 This layer depends on:
 
-* The layer itself has no dependencies right now.
+* URI: git://git.yoctoproject.org/meta-virtualization
+  * branch: dunfell
 
 ## Build
 
