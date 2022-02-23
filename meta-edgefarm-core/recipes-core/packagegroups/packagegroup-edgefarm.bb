@@ -7,7 +7,7 @@ PACKAGES = "\
     packagegroup-edgefarm-base \
     "
 
-RDEPENDSf_packagegroup-edgefarm-base = "\
+RDEPENDS_packagegroup-edgefarm-base = "\
     edgecore \
     persistent-edgecore \
     "
