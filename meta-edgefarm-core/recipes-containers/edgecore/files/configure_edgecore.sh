@@ -14,7 +14,11 @@ fi
 
 template=/etc/kubeedge/config/edgecore.yaml.TEMPLATE
 
-export CLOUDCORE_ADDRESS=${1}
+case "${1}" in
+*.nip.io*) export CLOUDCORE_ADDRESS=$(echo ${1} | sed -e 's/\./\-/g' -e 's/-nip-io/.nip.io/g') ;;
+*        ) export CLOUDCORE_ADDRESS=${1} ;;
+esac
+
 export  NODE_NAME=${2}
 
 eval "echo \"$(cat "${template}")\"" > /etc/kubeedge/config/edgecore.yaml
