@@ -17,7 +17,7 @@ modules:
     quic:
       enable: false
     rotateCertificates: true
-    tlsCaFile: /etc/kubeedge/certs/rootCa.pem
+    tlsCaFile: /etc/kubeedge/certs/rootCA.pem
     tlsCertFile: /etc/kubeedge/certs/node.pem
     tlsPrivateKeyFile: /etc/kubeedge/certs/node.key
     websocket:
@@ -31,7 +31,7 @@ modules:
     handshakeTimeout: 30
     readDeadline: 15
     server: ${CLOUDCORE_ADDRESS}:30004
-    tlsTunnelCAFile: /etc/kubeedge/certs/rootCa.pem
+    tlsTunnelCAFile: /etc/kubeedge/certs/rootCA.pem
     tlsTunnelCertFile: /etc/kubeedge/certs/node.pem
     tlsTunnelPrivateKeyFile: /etc/kubeedge/certs/node.key
     writeDeadline: 15
