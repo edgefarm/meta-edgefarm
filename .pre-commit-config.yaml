@@ -36,4 +36,8 @@ repos:
             --quiet,
             --relpaths,
             --suppress=oelint.task.nocopy,
+            --suppress=oelint.vars.insaneskip,
+            --fix,
+            --nobackup,
+            --color,
           ]
