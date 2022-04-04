@@ -9,5 +9,6 @@ PACKAGES = "\
 
 RDEPENDS_packagegroup-edgefarm-base = "\
     edgecore \
+    overlay-directories \
     persistent-edgecore \
     "
