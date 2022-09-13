@@ -6,6 +6,7 @@ Type=simple
 ExecStart=/usr/bin/edgecore
 Restart=always
 RestartSec=10
+LimitNOFILE=65536
 
 [Install]
 WantedBy=multi-user.target
