@@ -8,5 +8,4 @@ PACKAGES = "\
     "
 
 RDEPENDS_packagegroup-edgefarm-raspberrypi = "\
-    overlay-directories \
     "

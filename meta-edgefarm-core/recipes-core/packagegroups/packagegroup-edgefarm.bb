@@ -9,5 +9,4 @@ PACKAGES = "\
 
 RDEPENDS_packagegroup-edgefarm-base = "\
     edgecore \
-    persistent-edgecore \
     "
