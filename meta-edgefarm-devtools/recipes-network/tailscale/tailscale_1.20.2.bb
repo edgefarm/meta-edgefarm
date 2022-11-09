@@ -14,9 +14,6 @@ COMPATIBLE_HOST = "(i.86|x86_64|aarch64|arm).*-linux"
 #   https://pkgs.tailscale.com/stable/tailscale_1.20.2_arm64.tgz
 #
 
-#FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
-
-
 DIRECTORY_x86-64 = "${BPN}_${PV}_amd64"
 DIRECTORY_arm = "${BPN}_${PV}_arm"
 DIRECTORY_aarch64 = "${BPN}_${PV}_arm64"
@@ -38,11 +35,7 @@ SRC_URI[arm64.sha256sum] = "d23b3f9ce61d149a0514d4ef70e8f67d36ebdad75748d70a4ed9
 SRC_URI[386.md5sum] = "41dfb5b8305d7e4c2b8a2efdf465931e"
 SRC_URI[386.sha256sum] = "9400aa65dc4f7f6d2c2adcdfb1b9c991fa419e833f528964aa8a65021a5f2a2b"
 
-SRC_URI_x86-64 += "file://tailscaled_mod.service"
-SRC_URI_arm += "file://tailscaled_mod.service"
-SRC_URI_i586 += "file://tailscaled_mod.service"
-SRC_URI_i686 += "file://tailscaled_mod.service"
-SRC_URI_aarch64 += "file://tailscaled_mod.service"
+SRC_URI_append = " file://tailscaled_mod.service"
 
 inherit systemd
 
