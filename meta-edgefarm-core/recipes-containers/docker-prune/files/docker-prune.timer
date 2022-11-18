@@ -1,0 +1,12 @@
+[Unit]
+Description=Clean Up Docker Timer
+After=docker.service
+Requires=docker.service
+
+[Timer]
+OnActiveSec=5sec
+OnUnitActiveSec=60min
+Unit=docker-prune.service
+
+[Install]
+WantedBy=timers.target
