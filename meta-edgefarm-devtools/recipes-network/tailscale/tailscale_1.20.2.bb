@@ -35,6 +35,8 @@ SRC_URI[arm64.sha256sum] = "d23b3f9ce61d149a0514d4ef70e8f67d36ebdad75748d70a4ed9
 SRC_URI[386.md5sum] = "41dfb5b8305d7e4c2b8a2efdf465931e"
 SRC_URI[386.sha256sum] = "9400aa65dc4f7f6d2c2adcdfb1b9c991fa419e833f528964aa8a65021a5f2a2b"
 
+SRC_URI_append = " file://tailscaled_mod.service"
+
 inherit systemd
 
 # Archive contents:
@@ -54,7 +56,7 @@ do_install() {
     install ${WORKDIR}/${DIRECTORY}/tailscale ${D}/${bindir}/tailscale
     install ${WORKDIR}/${DIRECTORY}/tailscaled ${D}/${sbindir}/tailscaled
     install -m 0644 ${WORKDIR}/${DIRECTORY}/systemd/tailscaled.defaults ${D}${sysconfdir}/default/tailscaled
-    install -m 0644 ${WORKDIR}/${DIRECTORY}/systemd/tailscaled.service ${D}${systemd_unitdir}/system/tailscaled.service
+    install -m 0644 ${WORKDIR}/tailscaled_mod.service ${D}${systemd_unitdir}/system/tailscaled.service
     lnr ${D}${systemd_unitdir}/system/tailscaled.service ${D}${sysconfdir}/systemd/system/multi-user.target.wants/tailscaled.service
 }
 
