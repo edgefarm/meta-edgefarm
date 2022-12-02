@@ -4,9 +4,9 @@ After=docker.service
 Requires=docker.service
 
 [Timer]
-OnActiveSec=5sec
+OnActiveSec=60min
 OnUnitActiveSec=60min
-Unit=docker-prune.service
+Unit=docker-pruneb.service
 
 [Install]
 WantedBy=timers.target
