@@ -1,5 +1,7 @@
 [Unit]
 Description=edgecore.service
+After=docker.service
+Requires=docker.service
 
 [Service]
 Type=simple

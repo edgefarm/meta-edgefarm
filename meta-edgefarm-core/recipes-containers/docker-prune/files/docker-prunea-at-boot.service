@@ -1,0 +1,10 @@
+[Unit]
+Description=Clean Up Docker Containers
+After=docker.service
+Requires=docker.service
+Before=edgecore.service
+
+[Service]
+ExecStart=/usr/bin/docker container prune --force
+[Install]
+WantedBy=multi-user.target
