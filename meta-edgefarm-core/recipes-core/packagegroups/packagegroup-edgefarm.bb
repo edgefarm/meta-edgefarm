@@ -9,6 +9,5 @@ PACKAGES = "\
 
 RDEPENDS_packagegroup-edgefarm-base = "\
     edgecore \
-    docker-prunea \
-    docker-pruneb \
+    docker-prune \
     "
