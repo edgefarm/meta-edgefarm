@@ -17,4 +17,5 @@ RDEPENDS_packagegroup-edgefarm-base = "\
     cni-plugins \
     crictl \
     kubeadm \
+    hostname2hosts \
     "
