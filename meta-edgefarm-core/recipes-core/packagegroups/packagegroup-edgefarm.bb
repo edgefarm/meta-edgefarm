@@ -16,6 +16,6 @@ RDEPENDS_packagegroup-edgefarm-base = "\
     iproute2-tc \
     cni-plugins \
     crictl \
-    kubeadm \
+    k8s \
     hostname2hosts \
     "
