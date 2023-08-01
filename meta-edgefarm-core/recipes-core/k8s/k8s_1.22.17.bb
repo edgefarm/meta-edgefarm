@@ -1,10 +1,9 @@
-SUMMARY = "Install kubeadm"
-DESCRIPTION = "TODO"
+SUMMARY = "Install k8s"
+DESCRIPTION = "Installation of kubeadm, kubelet and kubectl together with service and config files"
 
 inherit systemd
 
 LICENSE = "Apache-2.0"
-# TODO solve LICENSE Problem
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
 COMPATIBLE_HOST = "(amd64|aarch64|arm).*-linux"

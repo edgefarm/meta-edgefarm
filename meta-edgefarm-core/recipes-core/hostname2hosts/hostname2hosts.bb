@@ -1,5 +1,5 @@
-SUMMARY = "Docker Prune - enabled services"
-DESCRIPTION = "Systemd timer and at-boot-service to clean up docker containers"
+SUMMARY = "Hostname2Hosts"
+DESCRIPTION = "Installation of a systemd service and timer to update the /etc/hosts file with the current hostname and IP address."
 HOMEPAGE = "https://ci4rail.com"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
