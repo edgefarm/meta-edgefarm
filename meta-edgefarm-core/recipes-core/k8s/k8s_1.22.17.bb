@@ -48,18 +48,18 @@ SRC_URI[service.sha256sum] = "48c8f5a6a13d4179fe156f4813167a590177cfdda73c1b9681
 SRC_URI[config.sha256sum] = "3b6e4cb3ac34a6df6dd60ce45c9ebf035fc3ec160dc001b28afb7cca1c11ef06"
 
 do_install() {
-    install -d ${D}/usr/local/bin
+    install -d ${D}${bindir}
     install -d ${D}${systemd_system_unitdir}
     install -d ${D}${sysconfdir}/systemd/system/kubelet.service.d
-    install -m 0755 ${WORKDIR}/kubeadm ${D}/usr/bin
-    install -m 0755 ${WORKDIR}/kubelet ${D}/usr/bin
-    install -m 0755 ${WORKDIR}/kubectl ${D}/usr/bin
+    install -m 0755 ${WORKDIR}/kubeadm ${D}${bindir}
+    install -m 0755 ${WORKDIR}/kubelet ${D}${bindir}
+    install -m 0755 ${WORKDIR}/kubectl ${D}${bindir}
     install -m 0644 ${WORKDIR}/kubelet.service ${D}${systemd_system_unitdir}
     install -m 0644 ${WORKDIR}/10-kubeadm.conf ${D}${sysconfdir}/systemd/system/kubelet.service.d
 }
 
-FILES_${PN} = "/usr/bin/kubeadm \
-                /usr/bin/kubelet \
-                /usr/bin/kubectl \
-                ${systemd_system_unitdir}/kubelet.service \
-                ${sysconfdir}/systemd/system/kubelet.service.d/10-kubeadm.conf"
+FILES_${PN} = "${bindir}/kubeadm \
+               ${bindir}/kubelet \
+               ${bindir}/kubectl \
+               ${systemd_system_unitdir}/kubelet.service \
+               ${sysconfdir}/systemd/system/kubelet.service.d/10-kubeadm.conf"
