@@ -28,3 +28,7 @@ do_install_append() {
 REQUIRED_DISTRO_FEATURES= "systemd"
 
 RDEPENDS_${PN} += "bash"
+
+FILES_${PN} += "${bindir}/hostname2hosts.sh \
+                ${systemd_unitdir}/system/hostname2hosts.service \
+                ${systemd_unitdir}/system/hostname2hosts.timer \"
