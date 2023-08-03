@@ -1,5 +1,5 @@
-SUMMARY = "Docker Prune - enabled services"
-DESCRIPTION = "Systemd timer and at-boot-service to clean up docker containers"
+SUMMARY = "Docker Prune at System Start"
+DESCRIPTION = "at-boot-service to clean up docker containers"
 HOMEPAGE = "https://ci4rail.com"
 
 LICENSE = "Apache-2.0"
