@@ -1,8 +1,6 @@
 SUMMARY = "Install k8s"
 DESCRIPTION = "Installation of kubeadm, kubelet and kubectl together with service and config files"
 
-inherit systemd
-
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
@@ -33,13 +31,9 @@ SRC_URI[kubectl_arm64.sha256sum] = "8fc2f8d5c80a6bf60be06f8cf28679a05ce565ce0bc8
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
-SYSTEMD_SERVICE_${PN} = "kubelet.service"
-SYSTEMD_AUTO_ENABLE = "enable"
-
 
 do_install() {
     install -d ${D}${bindir}
-    install -d ${D}${systemd_system_unitdir}
     install -d ${D}${sysconfdir}/systemd/system/kubelet.service.d
     install -m 0755 ${WORKDIR}/kubeadm ${D}${bindir}
     install -m 0755 ${WORKDIR}/kubelet ${D}${bindir}
@@ -48,4 +42,5 @@ do_install() {
 
 FILES_${PN} = "${bindir}/kubeadm \
                ${bindir}/kubelet \
-               ${bindir}/kubectl"
+               ${bindir}/kubectl \
+               ${sysconfdir}/systemd/system/kubelet.service.d"
