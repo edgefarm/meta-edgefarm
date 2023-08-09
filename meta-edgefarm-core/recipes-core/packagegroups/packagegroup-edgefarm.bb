@@ -8,7 +8,6 @@ PACKAGES = "\
     "
 
 RDEPENDS_packagegroup-edgefarm-base = "\
-    docker-prune \
     conntrack-tools \
     ebtables \
     socat \
