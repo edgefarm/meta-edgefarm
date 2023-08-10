@@ -18,4 +18,5 @@ RDEPENDS_packagegroup-edgefarm-base = "\
     crictl \
     k8s \
     hostname2hosts \
+    docker-prune \
     "
