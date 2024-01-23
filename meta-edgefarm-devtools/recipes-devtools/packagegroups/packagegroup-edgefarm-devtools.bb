@@ -7,7 +7,6 @@ RDEPENDS_${PN} = "\
                   bind-utils \
                   jq \
                   nats \
-                  tailscale \
                   termshark \
                   yq \
                   "
