@@ -8,7 +8,6 @@ PACKAGES = "\
     "
 
 RDEPENDS_packagegroup-edgefarm-base = "\
-    conntrack \
     conntrack-tools \
     ebtables \
     socat \
@@ -16,7 +15,8 @@ RDEPENDS_packagegroup-edgefarm-base = "\
     iproute2-tc \
     crictl \
     k8s \
-    hostname2hosts \
     docker-prune \
     netbird \
+    edge-netif-forward \
+    cni-plugins \
     "
