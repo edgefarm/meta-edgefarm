@@ -9,4 +9,6 @@ RDEPENDS_${PN} = "\
                   nats \
                   termshark \
                   yq \
+                  strace \
+                  inotify-tools \
                   "
