@@ -13,7 +13,8 @@ COMPATIBLE_HOST = "(aarch64).*-linux"
 
 DIRECTORY_aarch64 = "${BPN}_${PV}_linux_arm64"
 
-SRC_URI_append = " file://netbird.service"
+SRC_URI_append = " file://netbird.service \
+                   file://netbird.sysconfig"
 SRC_URI_aarch64 = "https://github.com/netbirdio/netbird/releases/download/v${PV}/${DIRECTORY}.tar.gz;name=arm64"
 
 SRC_URI[arm64.md5sum] = "2b761282ce43f936299596728332e09b"
@@ -23,15 +24,18 @@ inherit systemd
 
 
 do_install() {
-    install -d ${D}/${bindir}
+    install -d ${D}${bindir}
     install -d ${D}${systemd_unitdir}/system/
+    install -d ${D}${sysconfdir}/sysconfig
 
     install ${WORKDIR}/netbird ${D}/${bindir}/netbird
     install -m 0644 ${WORKDIR}/${PN}.service ${D}/${systemd_unitdir}/system
+    install -m 0644 ${WORKDIR}/netbird.sysconfig ${D}/${sysconfdir}/sysconfig/netbird
 }
 
 FILES_${PN} += "${bindir}/netbird"
 FILES_${PN} += "${systemd_unitdir}/system/netbird.service"
+FILES_${PN} += "${bindir}/netbird.sysconfig"
 
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "netbird.service"
