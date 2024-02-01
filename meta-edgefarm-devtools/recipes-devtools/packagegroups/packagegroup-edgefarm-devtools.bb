@@ -11,4 +11,5 @@ RDEPENDS_${PN} = "\
                   yq \
                   strace \
                   inotify-tools \
+                  tcpdump \
                   "
