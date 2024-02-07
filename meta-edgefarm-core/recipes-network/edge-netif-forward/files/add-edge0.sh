@@ -2,7 +2,7 @@
 
 # Name of the dummy interface
 dummy_interface="edge0"
-mac_address_file="/etc/edge0.mac"
+mac_address_file="/usr/local/etc/edge0.mac"
 ip_address="192.168.168.1"
 # Create or read MAC address from the file
 if [ -f "$mac_address_file" ]; then

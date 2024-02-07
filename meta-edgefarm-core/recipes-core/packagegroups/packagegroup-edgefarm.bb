@@ -13,10 +13,9 @@ RDEPENDS_packagegroup-edgefarm-base = "\
     socat \
     iproute2 \
     iproute2-tc \
-    crictl \
     k8s \
     docker-prune \
     netbird \
     edge-netif-forward \
-    cni-plugins \
+    hostname2hosts \
     "

@@ -17,8 +17,10 @@ SRC_URI_append = " file://netbird.service \
                    file://netbird.sysconfig"
 SRC_URI_aarch64 = "https://github.com/netbirdio/netbird/releases/download/v${PV}/${DIRECTORY}.tar.gz;name=arm64"
 
-SRC_URI[arm64.md5sum] = "2b761282ce43f936299596728332e09b"
-SRC_URI[arm64.sha256sum] = "0f1ee9660da2b1e3de7e6101fdc2bf435a12887ee1daa807ad17589a2a6e4e1f"
+#SRC_URI[arm64.md5sum] = "2b761282ce43f936299596728332e09b"
+SRC_URI[arm64.md5sum] = "79cbcb264c6ed0c3c03a91fb95f87027"
+#SRC_URI[arm64.sha256sum] = "0f1ee9660da2b1e3de7e6101fdc2bf435a12887ee1daa807ad17589a2a6e4e1f"
+SRC_URI[arm64.sha256sum] = "79926811b2a1749af3e96e8a928ebdeed23c39b160fdb7ea08cdf91693f0bd3f"
 
 inherit systemd
 

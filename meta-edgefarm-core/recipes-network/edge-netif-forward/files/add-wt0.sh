@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ip_file="/etc/wt0.ip"
+ip_file="/usr/local/etc/wt0.ip"
 wt0_info=$(ip addr show dev wt0 | grep -oE 'inet [0-9.]+' | awk '{print $2}')
 echo $wt0_info > $ip_file
 
