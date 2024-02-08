@@ -18,4 +18,5 @@ RDEPENDS_packagegroup-edgefarm-base = "\
     netbird \
     edge-netif-forward \
     hostname2hosts \
+    edgefarm-provisioning \
     "

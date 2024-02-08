@@ -1,0 +1,21 @@
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: JoinConfiguration
+discovery:
+  bootstrapToken:
+    token: BOOTSTRAP_TOKEN
+    apiServerEndpoint: ADDRESS
+    unsafeSkipCAVerification: true
+nodeRegistration:
+  criSocket: /var/run/dockershim.sock
+  name: NODE_NAME
+  ignorePreflightErrors:
+    - FileAvailable--etc-kubernetes-kubelet.conf
+    - DirAvailable--etc-kubernetes-manifests
+  kubeletExtraArgs:
+    rotate-certificates: "true"
+    pod-infra-container-image: registry.k8s.io/pause:3.8
+    node-labels: openyurt.io/is-edge-worker=true,node.edgefarm.io/machine=physical,node.edgefarm.io/type=edge,apps.openyurt.io/desired-nodepool=NODE_NAME,LABELSAPPEND
+    register-with-taints: edgefarm.io=:NoSchedule
+    network-plugin: cni
+    hostname-override: NODE_NAME
+    address: 192.168.168.1
