@@ -9,3 +9,4 @@ ip link delete flannel.1
 ip link set yurthub-dummy0 down
 ip link delete yurthub-dummy0
 systemctl restart docker
+rm -rf /var/lib/openyurt /var/lib/yurthub/
