@@ -8,6 +8,15 @@ PACKAGES = "\
     "
 
 RDEPENDS_packagegroup-edgefarm-base = "\
-    edgecore \
+    conntrack-tools \
+    ebtables \
+    socat \
+    iproute2 \
+    iproute2-tc \
+    cni-plugins \
+    cni-plugin-flannel \
+    crictl \
+    k8s \
+    hostname2hosts \
     docker-prune \
     "

@@ -1,0 +1,9 @@
+[Unit]
+Description=Sync /etc/hosts with /etc/hostname
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/hostname2hosts.sh
+
+[Install]
+WantedBy=multi-user.target

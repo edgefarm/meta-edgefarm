@@ -1,0 +1,11 @@
+[Unit]
+Description=Sync /etc/hosts with /etc/hostname every minute
+
+# set-hostname.service may exists or not
+After=set-hostname.service
+
+[Timer]
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target
